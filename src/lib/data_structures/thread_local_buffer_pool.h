@@ -3,8 +3,8 @@
 //
 
 /*
- * Buffer which provides concurrent access to it's underlying container, without the need of synchronization for
- * every insert. Each thread stores data to it's own, smaller buffer, which is later copied to the shared thread_safe_buffer.
+ * Buffer which provides concurrent access to it underlying container, without the need of synchronization for
+ * every insert. Each thread stores data to it own, smaller buffer, which is later copied to the shared thread_safe_buffer.
  */
 
 #ifndef MAXFLOW_THREAD_LOCAL_BUFFER_POOL_H
