@@ -5,7 +5,6 @@
 
 #include <ios>
 #include <fstream>
-#include <experimental/filesystem>
 #include "common_types.h"
 #include "command_line_parser.h"
 #include "graph_loader.h"
@@ -162,8 +161,7 @@ int main ( int argc, char * argv[] )
     std::string filename = "stdin";
     if ( file_path . has_value () )
     {
-        namespace fs = std::experimental::filesystem;
-        filename = fs::path ( *file_path ) . filename ();
+        filename = (*file_path) . substr((*file_path).find_last_of("/\\") + 1);
     }
 
     //run

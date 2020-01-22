@@ -9,4 +9,3 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CXX_COVERAGE_COMPILE_FLAGS}")
 
 add_executable(maxflow maxflow.cpp)
 target_include_directories(maxflow PRIVATE lib)
-target_link_libraries(maxflow stdc++fs)
